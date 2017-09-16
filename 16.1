@@ -1,0 +1,26 @@
+## Function for BMI (body mass divided by square of height)
+
+BMI = function(height, weight){
+  return(weight/(height^2))
+}
+
+
+
+h = 
+  1.67
+w = 
+  82
+
+bmi = BMI(h,w)
+print(bmi)
+
+## get category of BMI
+
+ifelse(bmi <  15, "very severlyunderweight", 
+       ifelse((bmi < 16), "severly underweight", 
+              ifelse((bmi < 18.5), "underweight", 
+                     ifelse((bmi < 25), "normal ( healthy weight)", 
+                            ifelse((bmi < 30), "overweight", 
+                                   ifelse((bmi < 35), "Obese I (Moderately obese)", 
+                                          ifelse((bmi < 40), "Obese II (severly obese)", 
+                                                 ifelse((bmi > 40), "Obese III (severly obese)"))))))))
